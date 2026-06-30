@@ -3,27 +3,127 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BDTT Website</title>
+    <title>BDTT | Digital Tools That Work</title>
     <meta
       name="description"
-      content="A lightweight GitHub Pages website starter."
+      content="BDTT builds practical websites, workflows, and digital systems for growing teams."
     >
     <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
-    <main class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="BDTT home">
+        <span class="brand-mark">B</span>
+        <span>BDTT</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
       <section class="hero" aria-labelledby="page-title">
-        <p class="eyebrow">GitHub Pages Starter</p>
-        <h1 id="page-title">BDTT Website</h1>
-        <p class="lede">
-          This site is ready to publish with GitHub Pages. Replace this text
-          with your project details, links, or announcement.
+        <div class="hero-copy">
+          <p class="eyebrow">Websites, systems, and support</p>
+          <h1 id="page-title">Digital tools that help your work move.</h1>
+          <p class="lede">
+            BDTT creates clean websites and practical online workflows for
+            businesses that need a dependable digital home base.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#contact">Start a project</a>
+            <a class="button secondary" href="#services">Explore services</a>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <img
+            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
+            alt="A bright workspace with laptops and notebooks on a shared table"
+          >
+        </figure>
+      </section>
+
+      <section class="section intro" aria-label="Overview">
+        <p>
+          A focused web presence should feel clear, credible, and easy to keep
+          current. This first version gives BDTT a strong foundation for
+          service details, examples, and direct outreach.
         </p>
-        <a class="button" href="https://pages.github.com/" rel="noreferrer">
-          GitHub Pages Docs
-        </a>
+      </section>
+
+      <section class="section" id="services" aria-labelledby="services-title">
+        <div class="section-heading">
+          <p class="eyebrow">Services</p>
+          <h2 id="services-title">Built around practical outcomes.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature">
+            <span class="feature-number">01</span>
+            <h3>Website Launches</h3>
+            <p>
+              Fast, polished sites for new brands, community projects, and
+              service businesses ready to publish.
+            </p>
+          </article>
+          <article class="feature">
+            <span class="feature-number">02</span>
+            <h3>Digital Workflows</h3>
+            <p>
+              Forms, automations, and content flows that reduce repeated admin
+              work and keep information organized.
+            </p>
+          </article>
+          <article class="feature">
+            <span class="feature-number">03</span>
+            <h3>Ongoing Care</h3>
+            <p>
+              Practical improvements, page updates, and technical support after
+              the first launch.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="work-band" id="work" aria-labelledby="work-title">
+        <div>
+          <p class="eyebrow">Approach</p>
+          <h2 id="work-title">Clear first, clever second.</h2>
+        </div>
+        <div class="work-list">
+          <article>
+            <h3>Define the job</h3>
+            <p>Map what the site needs to do before choosing tools or layout.</p>
+          </article>
+          <article>
+            <h3>Build the essentials</h3>
+            <p>Prioritize the pages, calls to action, and systems that matter.</p>
+          </article>
+          <article>
+            <h3>Refine in public</h3>
+            <p>Launch a sturdy version, then improve it with real feedback.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Ready for the next draft.</h2>
+        </div>
+        <p>
+          Add your preferred email, phone number, or booking link here. This
+          section is set up to become the main path for new inquiries.
+        </p>
+        <a class="button primary" href="mailto:hello@example.com">hello@example.com</a>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> BDTT. All rights reserved.</p>
+    </footer>
+
     <script src="assets/js/main.js"></script>
   </body>
 </html>

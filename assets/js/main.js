@@ -1,3 +1,5 @@
-const year = new Date().getFullYear();
+const year = document.querySelector("#year");
 
-document.documentElement.dataset.year = String(year);
+if (year) {
+  year.textContent = String(new Date().getFullYear());
+}
