@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | Bronze Dragon Tabletop</title>
+    <meta
+      name="description"
+      content="Contact Bronze Dragon Tabletop about games, events, and miniature painting."
+    >
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body data-page="contact">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Bronze Dragon Tabletop home">
+        <span class="brand-mark">BD</span>
+        <span>Bronze Dragon Tabletop</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="book-a-game.html">Book a Game</a>
+        <a href="upcoming-events.html">Upcoming Events</a>
+        <a href="miniatures.html">Miniatures</a>
+        <a href="about.html">About Me</a>
+        <a aria-current="page" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="page-title">
+        <p class="eyebrow">Inquiries</p>
+        <h1 id="page-title">Contact</h1>
+        <p class="lede">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis leo.
+        </p>
+      </section>
+
+      <section class="section split-section" aria-labelledby="contact-form-title">
+        <div>
+          <p class="eyebrow">Send a Message</p>
+          <h2 id="contact-form-title">Contact Form</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit
+            amet orci eget eros faucibus tincidunt.
+          </p>
+          <a class="text-link" data-contact-email href="mailto:hello@example.com">Email Directly</a>
+        </div>
+        <form class="contact-form" data-contact-form action="#" method="post">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic" required>
+            <option value="">Choose a topic</option>
+            <option value="book-a-game">Book a Game</option>
+            <option value="event">Upcoming Events</option>
+            <option value="miniatures">Miniatures</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="7" required></textarea>
+
+          <button class="button primary" type="submit">Send Message</button>
+          <p class="form-note" data-form-note>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
