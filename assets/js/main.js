@@ -1,6 +1,6 @@
 const siteConfig = {
-  googleFormEmbedUrl: "",
-  googleFormUrl: "",
+  googleFormEmbedUrl: "https://docs.google.com/forms/d/1HnirlMyJDa-AvbpjScK3lmxP7LqOHZtx5qxUNXrDQXo/viewform?embedded=true",
+  googleFormUrl: "https://docs.google.com/forms/d/1HnirlMyJDa-AvbpjScK3lmxP7LqOHZtx5qxUNXrDQXo/viewform",
   humanitixEmbedUrl: "",
   humanitixUrl: "",
   formspreeEndpoint: "",
