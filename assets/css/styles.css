@@ -73,18 +73,21 @@ a {
 }
 
 .brand-mark {
-  display: grid;
+  display: block;
   width: 42px;
   height: 42px;
   flex: 0 0 auto;
-  place-items: center;
   border: 2px solid rgba(255, 250, 240, 0.68);
   border-radius: 8px;
   background: var(--bronze-dark);
-  color: #fff8e8;
-  font-size: 0.85rem;
-  letter-spacing: 0;
   box-shadow: 0 10px 28px rgba(117, 64, 23, 0.28);
+  overflow: hidden;
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .nav-links {
