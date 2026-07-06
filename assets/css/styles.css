@@ -1,17 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:wght@500;600;700&family=Fondamento&display=swap");
+
 :root {
   color-scheme: light;
-  --ink: #1a1410;
-  --muted: #665f55;
-  --paper: #f8f0df;
-  --surface: #fffaf0;
-  --surface-strong: #f2dfbc;
-  --line: #d8c399;
-  --bronze: #b76f2a;
-  --bronze-dark: #754017;
-  --green: #173f34;
-  --green-soft: #dfe9d9;
-  --ember: #d8a541;
-  --shadow: 0 24px 80px rgba(26, 20, 16, 0.16);
+  --ink: #14241f;
+  --muted: #5d665d;
+  --paper: #efe1c4;
+  --surface: #fff7e6;
+  --surface-strong: #e7d0a8;
+  --line: #c9ad7e;
+  --bronze: #bf7437;
+  --bronze-dark: #8b4a24;
+  --green: #174841;
+  --green-deep: #10362f;
+  --green-soft: #dce7d5;
+  --ember: #bf7437;
+  --cream: #fff7e6;
+  --shadow: 0 26px 90px rgba(16, 10, 8, 0.22);
+  --body-font: "Cormorant Garamond", Georgia, serif;
+  --label-font: "Cinzel", Georgia, serif;
+  --display-font: "Fondamento", Georgia, serif;
 }
 
 * {
@@ -26,12 +33,10 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    linear-gradient(135deg, rgba(183, 111, 42, 0.14), transparent 42%),
-    linear-gradient(315deg, rgba(23, 63, 52, 0.12), transparent 42%),
+    linear-gradient(135deg, rgba(191, 116, 55, 0.16), transparent 42%),
+    linear-gradient(315deg, rgba(23, 72, 65, 0.12), transparent 42%),
     var(--paper);
-  font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family: var(--body-font);
 }
 
 img {
@@ -52,8 +57,8 @@ a {
   justify-content: space-between;
   gap: 22px;
   padding: 16px clamp(18px, 5vw, 72px);
-  border-bottom: 1px solid rgba(216, 195, 153, 0.78);
-  background: rgba(248, 240, 223, 0.94);
+  border-bottom: 1px solid rgba(201, 173, 126, 0.78);
+  background: rgba(239, 225, 196, 0.94);
   backdrop-filter: blur(18px);
 }
 
@@ -68,6 +73,7 @@ a {
   min-width: 210px;
   gap: 10px;
   color: var(--green);
+  font-family: var(--label-font);
   font-weight: 900;
   text-decoration: none;
 }
@@ -78,9 +84,9 @@ a {
   height: 42px;
   flex: 0 0 auto;
   border: 2px solid rgba(255, 250, 240, 0.68);
-  border-radius: 8px;
-  background: var(--bronze-dark);
-  box-shadow: 0 10px 28px rgba(117, 64, 23, 0.28);
+  border-radius: 6px;
+  background: var(--surface);
+  box-shadow: 0 10px 28px rgba(35, 93, 84, 0.24);
   overflow: hidden;
 }
 
@@ -95,6 +101,7 @@ a {
   flex-wrap: wrap;
   gap: 10px 20px;
   color: var(--muted);
+  font-family: var(--label-font);
   font-size: 0.92rem;
   font-weight: 800;
 }
@@ -129,6 +136,40 @@ a {
   padding-bottom: 58px;
 }
 
+body[data-page="home"] {
+  background:
+    radial-gradient(circle at 80% 18%, rgba(191, 116, 55, 0.32), transparent 28%),
+    linear-gradient(135deg, var(--green), color-mix(in srgb, var(--green) 70%, #100b08));
+}
+
+body[data-page="home"] .site-header {
+  border-bottom-color: rgba(255, 247, 230, 0.18);
+  background: rgba(16, 54, 47, 0.82);
+}
+
+body[data-page="home"] .brand,
+body[data-page="home"] .nav-links {
+  color: rgba(255, 247, 230, 0.86);
+}
+
+body[data-page="home"] .nav-links a:hover,
+body[data-page="home"] .nav-links a:focus-visible,
+body[data-page="home"] .nav-links a[aria-current="page"] {
+  color: var(--bronze);
+}
+
+body[data-page="home"] .hero-home {
+  color: var(--cream);
+}
+
+body[data-page="home"] .hero-home h1 {
+  color: var(--cream);
+}
+
+body[data-page="home"] .hero-home .lede {
+  color: rgba(255, 247, 230, 0.78);
+}
+
 .page-hero {
   padding-top: clamp(58px, 8vw, 112px);
   padding-bottom: clamp(42px, 6vw, 76px);
@@ -143,7 +184,8 @@ a {
 
 .eyebrow {
   margin: 0 0 12px;
-  color: var(--bronze-dark);
+  color: var(--bronze);
+  font-family: var(--label-font);
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -158,18 +200,22 @@ p {
 }
 
 h1 {
-  max-width: 12ch;
+  max-width: 11ch;
   margin-bottom: 24px;
   color: var(--green);
+  font-family: var(--display-font);
   font-size: clamp(3.1rem, 8vw, 7.1rem);
-  line-height: 0.94;
+  font-weight: 400;
+  line-height: 0.9;
   letter-spacing: 0;
 }
 
 h2 {
   margin-bottom: 0;
   color: var(--green);
+  font-family: var(--label-font);
   font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 900;
   line-height: 1;
   letter-spacing: 0;
 }
@@ -177,7 +223,9 @@ h2 {
 h3 {
   margin-bottom: 10px;
   color: var(--green);
+  font-family: var(--label-font);
   font-size: 1.18rem;
+  font-weight: 900;
   letter-spacing: 0;
 }
 
@@ -205,6 +253,7 @@ p {
   padding: 0 18px;
   border: 1px solid transparent;
   border-radius: 8px;
+  font-family: var(--label-font);
   font-weight: 900;
   text-decoration: none;
   transition:
@@ -231,13 +280,13 @@ textarea:focus {
 }
 
 .button.primary {
-  background: var(--bronze-dark);
+  background: var(--green-deep);
   color: #fff8e8;
 }
 
 .button.primary:hover,
 .button.primary:focus-visible {
-  background: var(--green);
+  background: var(--bronze-dark);
 }
 
 .button.secondary {
@@ -250,6 +299,18 @@ textarea:focus {
 .button.secondary:focus-visible {
   border-color: var(--bronze-dark);
   color: var(--bronze-dark);
+}
+
+body[data-page="home"] .button.secondary {
+  border-color: rgba(255, 247, 230, 0.34);
+  background: transparent;
+  color: var(--cream);
+}
+
+body[data-page="home"] .button.secondary:hover,
+body[data-page="home"] .button.secondary:focus-visible {
+  border-color: var(--bronze);
+  color: var(--bronze);
 }
 
 .text-link {
@@ -282,6 +343,16 @@ textarea:focus {
   content: "";
 }
 
+.hero-media::after,
+.image-frame::after {
+  position: absolute;
+  inset: -34px 12px 12px -34px;
+  z-index: -1;
+  border: 2px solid rgba(255, 247, 230, 0.28);
+  border-radius: 8px;
+  content: "";
+}
+
 .hero-media img,
 .image-frame img {
   aspect-ratio: 4 / 5;
@@ -303,9 +374,13 @@ figcaption {
   padding-bottom: clamp(64px, 9vw, 112px);
 }
 
+body[data-page="home"] .section {
+  background: var(--paper);
+}
+
 .intro {
-  border-top: 1px solid rgba(216, 195, 153, 0.78);
-  border-bottom: 1px solid rgba(216, 195, 153, 0.78);
+  border-top: 1px solid rgba(201, 173, 126, 0.78);
+  border-bottom: 1px solid rgba(201, 173, 126, 0.78);
   background: rgba(255, 250, 240, 0.72);
 }
 
@@ -351,6 +426,7 @@ figcaption {
   display: inline-flex;
   margin-bottom: 44px;
   color: var(--bronze-dark);
+  font-family: var(--label-font);
   font-weight: 900;
 }
 
@@ -441,6 +517,7 @@ figcaption {
 
 label {
   color: var(--green);
+  font-family: var(--label-font);
   font-weight: 900;
 }
 
