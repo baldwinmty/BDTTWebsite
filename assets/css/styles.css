@@ -54,6 +54,18 @@ a {
   color: inherit;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -341,7 +353,7 @@ body[data-page="home"] .button.secondary:focus-visible {
 .hero-media::before,
 .image-frame::before {
   position: absolute;
-  inset: -18px 26px 26px -18px;
+  inset: 16px -16px -16px 16px;
   z-index: -1;
   border-radius: 8px;
   background: var(--ember);
@@ -351,7 +363,7 @@ body[data-page="home"] .button.secondary:focus-visible {
 .hero-media::after,
 .image-frame::after {
   position: absolute;
-  inset: -34px 12px 12px -34px;
+  inset: -16px 16px 16px -16px;
   z-index: -1;
   border: 2px solid rgba(255, 247, 230, 0.28);
   border-radius: 8px;
@@ -445,6 +457,16 @@ body[data-page="home"] .section {
 
 .events-layout-full {
   grid-template-columns: 1fr;
+}
+
+.form-section {
+  display: grid;
+  gap: 28px;
+}
+
+.form-section > .contact-form {
+  max-width: 880px;
+  width: 100%;
 }
 
 .embed-panel {
