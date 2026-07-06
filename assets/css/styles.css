@@ -438,6 +438,10 @@ body[data-page="home"] .section {
   gap: clamp(32px, 6vw, 82px);
 }
 
+.events-layout-full {
+  grid-template-columns: 1fr;
+}
+
 .embed-panel {
   min-height: 460px;
   overflow: hidden;
@@ -447,6 +451,16 @@ body[data-page="home"] .section {
   width: 100%;
   min-height: 640px;
   border: 0;
+}
+
+.humanitix-panel {
+  min-height: 720px;
+  background: var(--surface);
+}
+
+.humanitix-widget-frame {
+  display: block;
+  min-height: 720px;
 }
 
 .embed-placeholder {

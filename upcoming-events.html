@@ -43,36 +43,13 @@
           <p class="eyebrow">Humanitix</p>
           <h2 id="events-title">Event Tickets</h2>
         </div>
-        <div class="events-layout">
-          <div class="embed-panel" data-humanitix>
-            <div class="embed-placeholder">
-              <h3>Humanitix Events Embed</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque habitant morbi tristique senectus.
-              </p>
-              <a class="button primary" data-humanitix-link href="#">Open Events</a>
-            </div>
-          </div>
-          <div class="event-list">
-            <article class="event-card">
-              <span class="event-date">Event Date</span>
-              <h3>Featured Game Night</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                ultricies nisi vel augue.
-              </p>
-              <a class="button secondary" href="#">Buy Tickets</a>
-            </article>
-            <article class="event-card">
-              <span class="event-date">Event Date</span>
-              <h3>One-Shot Adventure</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                vitae sapien ut libero venenatis faucibus.
-              </p>
-              <a class="button secondary" href="#">Buy Tickets</a>
-            </article>
+        <div class="events-layout events-layout-full">
+          <div class="embed-panel humanitix-panel">
+            <iframe
+              class="humanitix-widget-frame"
+              data-checkout="dnduptownlounge"
+              title="Bronze Dragon Tabletop Humanitix Events"
+            ></iframe>
           </div>
         </div>
       </section>
@@ -83,6 +60,7 @@
       <p>Lorem ipsum dolor sit amet.</p>
     </footer>
 
+    <script src="https://events.humanitix.com/scripts/widgets/inline.js" type="module"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
