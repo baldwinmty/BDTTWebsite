@@ -19,6 +19,12 @@
   --body-font: "Cormorant Garamond", Georgia, serif;
   --label-font: "Cinzel", Georgia, serif;
   --display-font: "Fondamento", Georgia, serif;
+  --content-max: 1320px;
+  --page-gutter: clamp(20px, 5vw, 72px);
+  --centered-gutter: max(
+    var(--page-gutter),
+    calc((100vw - var(--content-max)) / 2)
+  );
 }
 
 * {
@@ -56,7 +62,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 22px;
-  padding: 16px clamp(18px, 5vw, 72px);
+  padding: 16px var(--centered-gutter);
   border-bottom: 1px solid rgba(201, 173, 126, 0.78);
   background: rgba(239, 225, 196, 0.94);
   backdrop-filter: blur(18px);
@@ -122,8 +128,8 @@ a {
 .section,
 .cta-band,
 .site-footer {
-  padding-right: clamp(20px, 5vw, 72px);
-  padding-left: clamp(20px, 5vw, 72px);
+  padding-right: var(--centered-gutter);
+  padding-left: var(--centered-gutter);
 }
 
 .hero {
@@ -177,8 +183,7 @@ body[data-page="home"] .hero-home .lede {
   background: rgba(255, 250, 240, 0.55);
 }
 
-.hero-copy,
-.page-hero {
+.hero-copy {
   max-width: 980px;
 }
 
