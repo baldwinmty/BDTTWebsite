@@ -386,6 +386,17 @@ figcaption {
   font-weight: 800;
 }
 
+.testimonial-name,
+.testimonial cite,
+.testimonials cite,
+blockquote cite {
+  color: var(--green);
+  font-family: var(--label-font);
+  font-size: 1.08rem;
+  font-style: normal;
+  font-weight: 900;
+}
+
 .section {
   padding-top: clamp(64px, 9vw, 112px);
   padding-bottom: clamp(64px, 9vw, 112px);
