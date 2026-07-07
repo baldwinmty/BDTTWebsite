@@ -390,6 +390,8 @@ figcaption {
 .testimonial cite,
 .testimonials cite,
 blockquote cite {
+  display: block;
+  margin-top: 10px;
   color: var(--green);
   font-family: var(--label-font);
   font-size: 1.08rem;
