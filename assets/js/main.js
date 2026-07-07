@@ -17,7 +17,7 @@ const googleFormPanel = document.querySelector("[data-google-form]");
 const googleFormLink = document.querySelector("[data-google-form-link]");
 
 if (googleFormPanel && siteConfig.googleFormEmbedUrl) {
-  googleFormPanel.innerHTML = `<iframe title="Book a Game Form" src="${siteConfig.googleFormEmbedUrl}" loading="lazy">Loading...</iframe>`;
+  googleFormPanel.innerHTML = `<iframe title="Private Games Form" src="${siteConfig.googleFormEmbedUrl}" loading="lazy">Loading...</iframe>`;
 }
 
 if (googleFormLink && siteConfig.googleFormUrl) {
