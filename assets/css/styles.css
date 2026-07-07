@@ -195,6 +195,18 @@ body[data-page="home"] .hero-home .lede {
   background: rgba(255, 250, 240, 0.55);
 }
 
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.68fr);
+  align-items: start;
+  gap: clamp(34px, 6vw, 86px);
+}
+
+.about-hero .image-frame {
+  width: min(100%, 460px);
+  justify-self: end;
+}
+
 .hero-copy {
   max-width: 980px;
 }
@@ -402,6 +414,16 @@ blockquote cite {
 .section {
   padding-top: clamp(64px, 9vw, 112px);
   padding-bottom: clamp(64px, 9vw, 112px);
+}
+
+.testimonials-section {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonials-copy {
+  width: min(100%, 860px);
+  text-align: center;
 }
 
 body[data-page="home"] .section {
@@ -631,6 +653,7 @@ textarea {
 
 @media (max-width: 900px) {
   .hero,
+  .about-hero,
   .section-heading,
   .split-section,
   .events-layout,
@@ -643,8 +666,10 @@ textarea {
   }
 
   .hero-media,
-  .image-frame {
+  .image-frame,
+  .about-hero .image-frame {
     max-width: 560px;
+    justify-self: start;
   }
 
   .feature-grid,
