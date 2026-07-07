@@ -3,7 +3,7 @@ const siteConfig = {
   googleFormUrl: "https://docs.google.com/forms/d/1HnirlMyJDa-AvbpjScK3lmxP7LqOHZtx5qxUNXrDQXo/viewform",
   humanitixEmbedUrl: "",
   humanitixUrl: "",
-  formspreeEndpoint: "",
+  formspreeEndpoint: "https://formspree.io/f/mlgykene",
   contactEmail: "hello@example.com",
 };
 
