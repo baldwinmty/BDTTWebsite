@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:wght@500;600;700&family=Fondamento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Fondamento&family=Spectral:wght@400;500;700&display=swap");
 
 :root {
   color-scheme: light;
@@ -16,7 +16,7 @@
   --ember: #bf7437;
   --cream: #fff7e6;
   --shadow: 0 26px 90px rgba(16, 10, 8, 0.22);
-  --body-font: "Cormorant Garamond", Georgia, serif;
+  --body-font: "Spectral", Georgia, serif;
   --label-font: "Cinzel", Georgia, serif;
   --display-font: "Fondamento", Georgia, serif;
   --content-max: 1320px;
