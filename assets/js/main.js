@@ -64,7 +64,10 @@ if (contactEmail) {
 const lightbox = document.querySelector("[data-lightbox-modal]");
 const lightboxImage = document.querySelector("[data-lightbox-image]");
 const lightboxClose = document.querySelector("[data-lightbox-close]");
-const lightboxLinks = document.querySelectorAll("[data-lightbox]");
+const lightboxPrevious = document.querySelector("[data-lightbox-previous]");
+const lightboxNext = document.querySelector("[data-lightbox-next]");
+const lightboxLinks = Array.from(document.querySelectorAll("[data-lightbox]"));
+let activeLightboxIndex = 0;
 
 const closeLightbox = () => {
   if (!lightbox || !lightboxImage) return;
@@ -75,16 +78,24 @@ const closeLightbox = () => {
   lightboxImage.removeAttribute("alt");
 };
 
-if (lightbox && lightboxImage && lightboxLinks.length) {
-  lightboxLinks.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      const image = link.querySelector("img");
+const showLightboxImage = (index) => {
+  if (!lightbox || !lightboxImage || !lightboxLinks.length) return;
 
+  activeLightboxIndex = (index + lightboxLinks.length) % lightboxLinks.length;
+  const activeLink = lightboxLinks[activeLightboxIndex];
+  const image = activeLink.querySelector("img");
+
+  lightboxImage.src = activeLink.href;
+  lightboxImage.alt = image?.alt || "Miniature painting close-up";
+  lightbox.classList.add("is-open");
+  lightbox.setAttribute("aria-hidden", "false");
+};
+
+if (lightbox && lightboxImage && lightboxLinks.length) {
+  lightboxLinks.forEach((link, index) => {
+    link.addEventListener("click", (event) => {
       event.preventDefault();
-      lightboxImage.src = link.href;
-      lightboxImage.alt = image?.alt || "Miniature painting close-up";
-      lightbox.classList.add("is-open");
-      lightbox.setAttribute("aria-hidden", "false");
+      showLightboxImage(index);
       lightboxClose?.focus();
     });
   });
@@ -96,10 +107,16 @@ if (lightbox && lightboxImage && lightboxLinks.length) {
   });
 
   lightboxClose?.addEventListener("click", closeLightbox);
+  lightboxPrevious?.addEventListener("click", () => showLightboxImage(activeLightboxIndex - 1));
+  lightboxNext?.addEventListener("click", () => showLightboxImage(activeLightboxIndex + 1));
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       closeLightbox();
+    } else if (lightbox.classList.contains("is-open") && event.key === "ArrowLeft") {
+      showLightboxImage(activeLightboxIndex - 1);
+    } else if (lightbox.classList.contains("is-open") && event.key === "ArrowRight") {
+      showLightboxImage(activeLightboxIndex + 1);
     }
   });
 }

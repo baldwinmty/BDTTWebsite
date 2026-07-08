@@ -8,7 +8,7 @@
       name="description"
       content="Miniature painting portfolio and commission inquiry page for Bronze Dragon Tabletop."
     >
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260708-miniatures">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260708-carousel">
     <link rel="icon" type="image/png" href="assets/images/bronze-dragon-logo.png">
     <link rel="apple-touch-icon" href="assets/images/bronze-dragon-logo.png">
   </head>
@@ -40,7 +40,6 @@
           </p>
           <div class="hero-actions">
             <a class="button primary" href="contact.html#contact-form">Request a Quote</a>
-            <a class="button secondary" href="#miniature-gallery">View Gallery</a>
           </div>
         </div>
         <div class="miniature-feature-grid" id="miniature-gallery" aria-label="Miniature painting gallery">
@@ -53,38 +52,8 @@
           <a class="miniature-feature" href="assets/images/miniatures/blue-skeleton.jpg" data-lightbox="miniatures">
             <img src="assets/images/miniatures/blue-skeleton.jpg" alt="Painted blue skeleton miniature">
           </a>
-        </div>
-      </section>
-
-      <section class="section miniature-sales-section" aria-labelledby="commission-title">
-        <div>
-          <p class="eyebrow">Painting Services</p>
-          <h2 id="commission-title">Commission Painting</h2>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-          viverra nulla ut metus varius laoreet. Aenean commodo ligula eget dolor.
-        </p>
-        <a class="button primary" href="contact.html#contact-form">Request a Quote</a>
-      </section>
-
-      <section class="section miniature-closeups" aria-labelledby="closeups-title">
-        <div class="section-heading">
-          <p class="eyebrow">Gallery</p>
-          <h2 id="closeups-title">Recent Work</h2>
-        </div>
-        <div class="gallery-grid">
-          <a class="gallery-card miniature-gallery-link" href="assets/images/miniatures/blood-skeletons-group.jpg" data-lightbox="miniatures">
+          <a class="miniature-feature" href="assets/images/miniatures/blood-skeletons-group.jpg" data-lightbox="miniatures">
             <img src="assets/images/miniatures/blood-skeletons-group.jpg" alt="Painted skeleton squad miniatures">
-            <span>Skeleton Squad</span>
-          </a>
-          <a class="gallery-card miniature-gallery-link" href="assets/images/miniatures/bronze-paladin.jpg" data-lightbox="miniatures">
-            <img src="assets/images/miniatures/bronze-paladin.jpg" alt="Painted armored paladin miniature">
-            <span>Bronze Paladin</span>
-          </a>
-          <a class="gallery-card miniature-gallery-link" href="assets/images/miniatures/blue-skeleton.jpg" data-lightbox="miniatures">
-            <img src="assets/images/miniatures/blue-skeleton.jpg" alt="Painted blue skeleton warrior miniature">
-            <span>Blue Skeleton</span>
           </a>
         </div>
       </section>
@@ -92,7 +61,9 @@
 
     <div class="lightbox" data-lightbox-modal aria-hidden="true" role="dialog" aria-label="Miniature image close-up">
       <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close gallery">Close</button>
+      <button class="lightbox-arrow lightbox-arrow-previous" type="button" data-lightbox-previous aria-label="Previous image">Previous</button>
       <img data-lightbox-image alt="">
+      <button class="lightbox-arrow lightbox-arrow-next" type="button" data-lightbox-next aria-label="Next image">Next</button>
     </div>
 
     <footer class="site-footer">
@@ -100,6 +71,6 @@
       <p>Adults must find time for play, too!</p>
     </footer>
 
-    <script src="assets/js/main.js?v=20260708-gallery"></script>
+    <script src="assets/js/main.js?v=20260708-carousel"></script>
   </body>
 </html>
