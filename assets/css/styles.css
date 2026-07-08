@@ -82,6 +82,7 @@ a {
 
 .brand,
 .nav-links,
+.header-social,
 .hero-actions {
   display: flex;
   align-items: center;
@@ -135,6 +136,44 @@ a {
   color: var(--bronze-dark);
 }
 
+.header-social {
+  gap: 10px;
+  color: var(--green);
+}
+
+.social-link {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  color: inherit;
+  background: currentColor;
+  text-decoration: none;
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  color: var(--bronze-dark);
+  transform: translateY(-1px);
+}
+
+.social-link:focus-visible {
+  outline: 3px solid rgba(183, 111, 42, 0.28);
+  outline-offset: 3px;
+}
+
+.social-link-instagram {
+  -webkit-mask: url("../images/social/instagram.png") center / contain no-repeat;
+  mask: url("../images/social/instagram.png") center / contain no-repeat;
+}
+
+.social-link-discord {
+  -webkit-mask: url("../images/social/discord.png") center / contain no-repeat;
+  mask: url("../images/social/discord.png") center / contain no-repeat;
+}
+
 .hero,
 .page-hero,
 .section,
@@ -166,13 +205,16 @@ body[data-page="home"] .site-header {
 }
 
 body[data-page="home"] .brand,
-body[data-page="home"] .nav-links {
+body[data-page="home"] .nav-links,
+body[data-page="home"] .header-social {
   color: rgba(255, 247, 230, 0.86);
 }
 
 body[data-page="home"] .nav-links a:hover,
 body[data-page="home"] .nav-links a:focus-visible,
-body[data-page="home"] .nav-links a[aria-current="page"] {
+body[data-page="home"] .nav-links a[aria-current="page"],
+body[data-page="home"] .social-link:hover,
+body[data-page="home"] .social-link:focus-visible {
   color: var(--bronze);
 }
 
@@ -928,6 +970,10 @@ textarea {
 
   .nav-links {
     justify-content: flex-start;
+  }
+
+  .header-social {
+    margin-top: -4px;
   }
 }
 
