@@ -8,7 +8,7 @@
       name="description"
       content="Upcoming Bronze Dragon Tabletop events and ticket links."
     >
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260708-events-popup">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260708-events-single">
     <link rel="icon" type="image/png" href="assets/images/bronze-dragon-logo.png">
     <link rel="apple-touch-icon" href="assets/images/bronze-dragon-logo.png">
   </head>
@@ -29,35 +29,36 @@
     </header>
 
     <main>
-      <section class="page-hero" aria-labelledby="page-title">
-        <p class="eyebrow"></p>
-        <h1 id="page-title">Upcoming Events</h1>
-        <p class="lede">
-          Meet and play games with other TTRPG enthusiasts at one of my events below!
-        </p>
-      </section>
-
-      <section class="section upcoming-feature-section" aria-labelledby="featured-event-title">
-        <div class="upcoming-events-copy">
-          <p class="eyebrow">Featured Event</p>
-          <h2 id="featured-event-title">Dungeons & Dragons Night</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-            odio praesent libero sed cursus ante dapibus diam.
+      <section class="page-hero events-single-section" aria-labelledby="page-title">
+        <div class="events-single-copy">
+          <p class="eyebrow">Events</p>
+          <h1 id="page-title">Upcoming Events</h1>
+          <p class="lede">
+            Meet and play games with other TTRPG enthusiasts at one of my events below!
           </p>
-        </div>
-        <article class="featured-event-card">
-          <img src="assets/images/events/game-night.jpg" alt="Tabletop roleplaying setup at a game night">
-          <div class="featured-event-copy">
-            <p class="event-meta">Uptown Lounge</p>
-            <h3>Dungeons & Dragons Night</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi
-              nulla, quis sem at nibh elementum imperdiet.
-            </p>
-            <button class="button primary" type="button" data-checkout="dnduptownlounge">Buy Tickets</button>
+          <div class="event-offerings" aria-label="Event offerings">
+            <article>
+              <p class="event-meta">Uptown Lounge</p>
+              <h2>Dungeons & Dragons Night</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                nisi nulla, quis sem at nibh elementum imperdiet.
+              </p>
+              <button class="button primary" type="button" data-checkout="dnduptownlounge">Buy Tickets</button>
+            </article>
+            <article>
+              <p class="event-meta">New Date Coming Soon</p>
+              <h2>More Events Soon</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus viverra nulla ut metus varius laoreet.
+              </p>
+            </article>
           </div>
-        </article>
+        </div>
+        <figure class="events-single-image">
+          <img src="assets/images/events/game-night.jpg" alt="Tabletop roleplaying setup at a game night">
+        </figure>
       </section>
     </main>
 
@@ -67,6 +68,6 @@
     </footer>
 
     <script src="https://events.humanitix.com/scripts/widgets/popup.js" type="module"></script>
-    <script src="assets/js/main.js?v=20260708-events-popup"></script>
+    <script src="assets/js/main.js?v=20260708-events-single"></script>
   </body>
 </html>
