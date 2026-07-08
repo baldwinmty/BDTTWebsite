@@ -8,7 +8,7 @@
       name="description"
       content="Miniature painting portfolio and commission inquiry page for Bronze Dragon Tabletop."
     >
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260708-layout">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260708-miniatures">
     <link rel="icon" type="image/png" href="assets/images/bronze-dragon-logo.png">
     <link rel="apple-touch-icon" href="assets/images/bronze-dragon-logo.png">
   </head>
@@ -29,63 +29,77 @@
     </header>
 
     <main>
-      <section class="page-hero" aria-labelledby="page-title">
-        <p class="eyebrow">Portfolio</p>
-        <h1 id="page-title">Miniatures</h1>
-        <p class="lede">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium
-          turpis et arcu.
-        </p>
-      </section>
-
-      <section class="section" aria-labelledby="portfolio-title">
-        <div class="section-heading">
-          <p class="eyebrow">Painting</p>
-          <h2 id="portfolio-title">Miniature Painting Portfolio</h2>
-        </div>
-        <div class="gallery-grid">
-          <figure class="gallery-card">
-            <img src="assets/images/miniatures-portfolio.png" alt="Painted fantasy miniatures">
-            <figcaption>
-              <h3>Hero Models</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <img src="assets/images/miniatures-portfolio.png" alt="Painted tabletop miniatures">
-            <figcaption>
-              <h3>Monster Models</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <img src="assets/images/miniatures-portfolio.png" alt="Fantasy miniatures on display">
-            <figcaption>
-              <h3>Display Pieces</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="cta-band" aria-labelledby="commission-title">
-        <div>
+      <section class="page-hero miniatures-hero" aria-labelledby="page-title">
+        <div class="miniatures-copy">
           <p class="eyebrow">Commissions</p>
-          <h2 id="commission-title">Commission Inquiry</h2>
+          <h1 id="page-title">Miniatures</h1>
+          <p class="lede">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium
+            turpis et arcu. Donec quam felis, ultricies nec, pellentesque eu,
+            pretium quis, sem.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="contact.html#contact-form">Request a Quote</a>
+            <a class="button secondary" href="#miniature-gallery">View Gallery</a>
+          </div>
+        </div>
+        <div class="miniature-feature-grid" id="miniature-gallery" aria-label="Miniature painting gallery">
+          <a class="miniature-feature lead" href="assets/images/miniatures/blood-skeleton-spear.jpg" data-lightbox="miniatures">
+            <img src="assets/images/miniatures/blood-skeleton-spear.jpg" alt="Painted skeleton warrior miniature with spear">
+          </a>
+          <a class="miniature-feature" href="assets/images/miniatures/bronze-paladin.jpg" data-lightbox="miniatures">
+            <img src="assets/images/miniatures/bronze-paladin.jpg" alt="Painted bronze armored paladin miniature">
+          </a>
+          <a class="miniature-feature" href="assets/images/miniatures/blue-skeleton.jpg" data-lightbox="miniatures">
+            <img src="assets/images/miniatures/blue-skeleton.jpg" alt="Painted blue skeleton miniature">
+          </a>
+        </div>
+      </section>
+
+      <section class="section miniature-sales-section" aria-labelledby="commission-title">
+        <div>
+          <p class="eyebrow">Painting Services</p>
+          <h2 id="commission-title">Commission Painting</h2>
         </div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-          viverra nulla ut metus varius laoreet.
+          viverra nulla ut metus varius laoreet. Aenean commodo ligula eget dolor.
         </p>
-        <a class="button primary" href="contact.html">Contact Me</a>
+        <a class="button primary" href="contact.html#contact-form">Request a Quote</a>
+      </section>
+
+      <section class="section miniature-closeups" aria-labelledby="closeups-title">
+        <div class="section-heading">
+          <p class="eyebrow">Gallery</p>
+          <h2 id="closeups-title">Recent Work</h2>
+        </div>
+        <div class="gallery-grid">
+          <a class="gallery-card miniature-gallery-link" href="assets/images/miniatures/blood-skeletons-group.jpg" data-lightbox="miniatures">
+            <img src="assets/images/miniatures/blood-skeletons-group.jpg" alt="Painted skeleton squad miniatures">
+            <span>Skeleton Squad</span>
+          </a>
+          <a class="gallery-card miniature-gallery-link" href="assets/images/miniatures/bronze-paladin.jpg" data-lightbox="miniatures">
+            <img src="assets/images/miniatures/bronze-paladin.jpg" alt="Painted armored paladin miniature">
+            <span>Bronze Paladin</span>
+          </a>
+          <a class="gallery-card miniature-gallery-link" href="assets/images/miniatures/blue-skeleton.jpg" data-lightbox="miniatures">
+            <img src="assets/images/miniatures/blue-skeleton.jpg" alt="Painted blue skeleton warrior miniature">
+            <span>Blue Skeleton</span>
+          </a>
+        </div>
       </section>
     </main>
+
+    <div class="lightbox" data-lightbox-modal aria-hidden="true" role="dialog" aria-label="Miniature image close-up">
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close gallery">Close</button>
+      <img data-lightbox-image alt="">
+    </div>
 
     <footer class="site-footer">
       <p>Bronze Dragon Tabletop LLC</p>
       <p>Adults must find time for play, too!</p>
     </footer>
 
-    <script src="assets/js/main.js?v=20260707-formspree"></script>
+    <script src="assets/js/main.js?v=20260708-gallery"></script>
   </body>
 </html>

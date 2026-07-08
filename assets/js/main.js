@@ -60,3 +60,46 @@ if (contactForm && siteConfig.formspreeEndpoint) {
 if (contactEmail) {
   contactEmail.href = `mailto:${siteConfig.contactEmail}`;
 }
+
+const lightbox = document.querySelector("[data-lightbox-modal]");
+const lightboxImage = document.querySelector("[data-lightbox-image]");
+const lightboxClose = document.querySelector("[data-lightbox-close]");
+const lightboxLinks = document.querySelectorAll("[data-lightbox]");
+
+const closeLightbox = () => {
+  if (!lightbox || !lightboxImage) return;
+
+  lightbox.classList.remove("is-open");
+  lightbox.setAttribute("aria-hidden", "true");
+  lightboxImage.removeAttribute("src");
+  lightboxImage.removeAttribute("alt");
+};
+
+if (lightbox && lightboxImage && lightboxLinks.length) {
+  lightboxLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const image = link.querySelector("img");
+
+      event.preventDefault();
+      lightboxImage.src = link.href;
+      lightboxImage.alt = image?.alt || "Miniature painting close-up";
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+      lightboxClose?.focus();
+    });
+  });
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  lightboxClose?.addEventListener("click", closeLightbox);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
+  });
+}
