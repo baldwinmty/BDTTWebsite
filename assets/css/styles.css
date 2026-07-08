@@ -601,7 +601,7 @@ body[data-page="home"] .section {
 .events-single-section {
   display: grid;
   grid-template-columns: minmax(0, 0.72fr) minmax(340px, 1fr);
-  align-items: center;
+  align-items: start;
   gap: clamp(34px, 6vw, 86px);
 }
 
